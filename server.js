@@ -20,6 +20,13 @@ mongoose
     } )
     .catch( (error) => console.log(error));
 
+app.get("/test",(req, res) => {
+
+    return res.json({
+    message:"Hello World"
+    })
+})
+
 app.use(routes)
 
 app.listen( PORT, ()=> console.log(`listening on :${PORT}`))
